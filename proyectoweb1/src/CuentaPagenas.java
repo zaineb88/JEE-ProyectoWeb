@@ -7,35 +7,36 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** 
- * Servlet implementation class ObtenerInfoPatologia
+/**
+ * Servlet implementation class CuentaPagenas
  */
-@WebServlet("/ObtenerInfoPatologia")
-public class ObtenerInfoPatologia extends HttpServlet {
+@WebServlet("/CuentaPagenas")
+public class CuentaPagenas extends HttpServlet {
+	
+	private int contador;
+
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public ObtenerInfoPatologia() {
+    public CuentaPagenas() {
         super();
         // TODO Auto-generated constructor stub
     }
-
-	/** http://localhost:8010/proyectoweb1/ObtenerInfoPatologia?id=1
+	@Override
+	public void init() throws ServletException {
+		// TODO Auto-generated method stub
+		super.init();
+		contador=0;
+	}
+	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		
-		System.out.println("llamando el DEPOST");
-		String str = request.getParameter("id");
-		System.out.println("Id ="+ str);
-		
-//		
-//		String valorid = request.getParameter("id");
-//		System.out.println("Valor id ="+valorid);
-//		response.getWriter().append("Served at: ").append(request.getContextPath());
+	//	response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().append("Numero de visitas : "+contador);
 	}
 
 	/**
@@ -43,7 +44,18 @@ public class ObtenerInfoPatologia extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+	
 	}
+	
+	@Override
+	protected void service(HttpServletRequest arg0, HttpServletResponse arg1) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.service(arg0, arg1);
+		
+		contador++;
+		System.out.println("El numero de visitas son "+contador);
+	}
+	
+
 
 }
