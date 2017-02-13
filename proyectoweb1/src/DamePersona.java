@@ -41,7 +41,7 @@ public class DamePersona extends HttpServlet {
 		pw.write(json);
 		
 		
-		response.setContentType("application/json");
+		response.setContentType("application/json");// avisa el navigador el tipo del message que esta en el cuerpo (por defecto era html)
 	}
 
 	/**
