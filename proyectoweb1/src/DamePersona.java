@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
 
-import proyectoweb1.Actorazo;
+import Patologias.Actorazo;
 
 /**
  * Servlet implementation class DamePersona
@@ -34,7 +34,7 @@ public class DamePersona extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		Actorazo actor = new Actorazo("susana",23);
+		Patologias.Actorazo actor = new Patologias.Actorazo("zizi",23);
 		Gson gson= new Gson();
 		String json=gson.toJson(actor);
 		PrintWriter pw=response.getWriter();

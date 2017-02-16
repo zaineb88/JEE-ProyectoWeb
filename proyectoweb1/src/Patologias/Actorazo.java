@@ -1,4 +1,4 @@
-package proyectoweb1;
+package Patologias;
 
 public class Actorazo {
 
