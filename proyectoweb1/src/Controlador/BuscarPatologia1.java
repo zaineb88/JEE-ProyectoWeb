@@ -38,9 +38,8 @@ public class BuscarPatologia1 extends HttpServlet {
 		PatologiaDTO patoDto =ps.buscarPatologiaPorId(id);
 
 		request.setAttribute("patologia", patoDto);
-		request.getRequestDispatcher(".//html//catarata.jsp");
 		
-		response.getWriter().append(""+patoDto);//.append(request.getContextPath());
+		//response.getWriter().append(""+patoDto);//.append(request.getContextPath());
 		
 
 		switch (id) {

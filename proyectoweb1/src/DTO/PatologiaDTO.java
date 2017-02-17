@@ -10,14 +10,7 @@ import DTO.SintomaDTO;
 
 
 public class PatologiaDTO {
-	
-//	public PatologiaDTO(int int1, String nString, String string, String string2, String nString2,
-//			List<SintomaDTO> sintomasPorPatologiaID) {
-//		// TODO Auto-generated constructor stub
-//	}
-//	public PatologiaDTO() {
-//		// TODO Auto-generated constructor stub
-//	}
+
 	private int id;
 	private String nombre;
 	private String causa;
@@ -26,17 +19,7 @@ public class PatologiaDTO {
 	private List<SintomaDTO> lista_sintomas;
 	
 
-//	
-//	public PatologiaDTO(int id, String nombre, String causa, String tratamiento, String descripcion,
-//			List<SintomaDTO> lista_sintomas) {
-//		super();
-//		this.id = id;
-//		this.nombre = nombre;
-//		this.causa = causa;
-//		this.tratamiento = tratamiento;
-//		this.descripcion = descripcion;
-//		this.lista_sintomas = lista_sintomas;
-//	}
+
 
 	public int getId() {
 		return id;
