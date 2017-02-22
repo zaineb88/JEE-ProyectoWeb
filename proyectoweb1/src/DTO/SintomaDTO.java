@@ -24,5 +24,11 @@ public class SintomaDTO {
 		this.descripcion = descripcion;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return this.id+ this.descripcion;
+	}
+	
 
 }
